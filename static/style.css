@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+* {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.chat-box {
+  border: 1px solid #e1efcb;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+}
+
+.user-message,
+.bot-message {
+  background-color: #B7DD79;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+}
+
+.bot-message {
+  background-color: #78BE20;
+}
+
+body {
+  padding-top: 56px; 
+}
+
+.sidebar {
+  background-color: #f8f9fa;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+}
+
+.main-content {
+  max-width: 900px;
+  margin: auto;
+  border-radius: 25px;
+}
+
+.container-section {
+  margin-top: 5rem;
+  text-align: justify;
+  background-color: #f8f9fa;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+}
+
+.container-section h2 {
+  color: #289ca7;
+}
+
+.container-section ul {
+  list-style: none;
+}
+
+.container-section li {
+  border: 0;
+}
+
+.container-section p {
+  margin-top: 1.5rem;
+}
+
+.nav-link:hover {
+  background-color: #0b3104;
+  color: white;
+}
+
+.navbar-brand {
+  color: white;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+  color: #B7DD79;
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: #B7DD79;
+  color: white;
+}
+
+.sidebar {
+  padding: 15px;
+}
+
+.sidebar-sticky {
+  color: #78BE20;
+}
+
+.sidebar-sticky a {
+  color: #78BE20;
+}
+
+.sidebar-sticky a:hover {
+  background-color: #78BE20;
+  color: white;
+}
+
+body {
+  background-color: #f8f9fa;
+}
+
+.navbar {
+  background-color: #3A913F;
+  color: white;
+}
+
+.sidebar {
+  background-color: #2f353b;
+  color: white;
+}
+
+.nav-link {
+  color: #97D700 !important;
+}
+
+.main-content {
+  max-width: 900px;
+  margin: auto;
+  border-radius: 15px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 50px;
+}
+
+h1,
+h2,
+h4 {
+  color: #3A913F;
+}
+
+.form-group {
+  background: #3A913F;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+textarea {
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#send-btn {
+  background-color: #78BE20;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
