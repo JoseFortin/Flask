@@ -163,7 +163,7 @@ textarea {
 
 .float-btn {
   position: fixed;
-  bottom: 20px;
+  bottom: 30px;
   right: 20px;
   background-color: #3A913F;
   border-radius: 50%;
@@ -184,6 +184,58 @@ textarea {
   text-decoration: none;
 }
 .float-btn a:hover {
-  color: #cdf9a4;
+  color: #06580e;
   text-decoration: none;
+}
+
+/* ESTO ES PARA EL PRIMER CONTENEDOR  */
+
+.bobby-container {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  border: 2px solid #03738f;
+  display: flex;
+  margin-bottom: 20px;
+  background-image: linear-gradient(to bottom right, #fdfefe, #43cbf5,#3689fd,#003bd0);
+}
+
+/* Estilo para el contenedor de texto */
+.text-container {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Estilo para el encabezado */
+.text-container h3 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 30px;
+  text-align: center;
+  color: #041f5d; 
+  text-shadow: #43cbf5;
+  margin-bottom: 10px;
+}
+
+/* Estilo para el párrafo */
+.text-container p {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 18px;
+  color: #130f0f;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* Estilo para el contenedor de la imagen */
+.image-container {
+  flex-shrink: 0;
+}
+
+/* Estilo para la imagen */
+.bobyb {
+  background-image: url('/static/img/Bbananas.png');
+  width: 250px;
+  height: 250px;
+  background-size: cover;
+  margin-top: 40px;
+  margin-right: 90px;
+  border-radius: 10px;
 }
