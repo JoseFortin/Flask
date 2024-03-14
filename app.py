@@ -15,9 +15,9 @@ def index():
 def Imagenes():
     return render_template("Imagenes.html")
 
-@app.route("/main.js")
+@app.route("/conversacion.js")
 def main_js():
-    return app.send_static_file("main.js")
+    return render_template("/js/conversacion.js")
 
 @app.route("/api", methods=["POST"])
 def api():

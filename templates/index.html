@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/static/style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -117,6 +117,11 @@
             <button type="button" class="btn btn-success btn-lg" id="send-btn">Enviar</button>
           </div>
           <br><br><br><br><br><br> <br><br><br><br><br><br>
+          <div class="float-btn">
+            <a class="btn-wsp" href="#">
+              <i class="fas fa-home"></i>
+            </a>
+          </div>
           <h1 id="competenciasO">Competencias Organizacionales</h1>
           <div class="col-md-9 ml-sm-auto col-lg-10 px-md-4 d-flex flex-column align-items-center" id="generando-ideas">
             <div class="container mt-5 text-justify p-4" style="background-color: #f8f9fa; border-radius: 15px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
@@ -303,110 +308,112 @@
           </div>
         </div>
       </div>
+
+      <!--Scrip para que los mensajes se muestren en cadena--> 
+      <script>
+        // Función para resaltar bloques de código cada segundo
+        setInterval(highlightAll, 2000);
     
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    </body>
-
-
-
-
-<script>
-  // Función para resaltar bloques de código cada segundo osea cuantos se podran producir 
-  setInterval(highlightAll, 2000);
-
-  function highlightAll() {
-    // Selecciona todos los bloques de código y los resalta
-    document.querySelectorAll("pre code").forEach(block => {
-      hljs.highlightBlock(block);
-    });
-  }
-
-  // Obtención de elementos del DOM, LO QUE PERMITE OBTENER LOS OBJETOS DEL SCRIP QUE ESTA GENERADO
-  const chatBox = document.querySelector(".chat-box");
-  const messageInput = document.querySelector("#message-input");
-  const sendBtn = document.querySelector("#send-btn");
-
-  // Función para agregar un mensaje al chat
-  function addMessage(message, isUserMessage) {
-    const messageDiv = document.createElement("div");
-    messageDiv.classList.add("mt-3", "p-3", "rounded");
-
-    // Determina si el mensaje es del usuario o del bot
-    if (isUserMessage) {
-      messageDiv.classList.add("user-message");
-    } else {
-      messageDiv.classList.add("bot-message");
-    }
-
-    // Añade el contenido del mensaje al contenedor
-    messageDiv.innerHTML = `<p>${message}</p>`;
-
-    // Agrega el contenedor al chat 
-    chatBox.appendChild(messageDiv);
-    chatBox.scrollTop = chatBox.scrollHeight;
-  }
-
-  // Función para enviar mensajes al servidor y recibir respuestas del bot
-  function sendMessage() {
-    const message = messageInput.value.trim();
-
-    // Verifica si el mensaje no est vacío
-    if (message !== "") {
-      // Agrega el mensaje del usuario al chat
-      addMessage(message, true);
-
-      // Realiza una solicitud al servidor con el mensaje del usuario
-      fetch("/api", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ message })
-      })
-        .then(response => response.json())
-        .then(data => {
-          // Limpia el área de entrada de mensajes
-          messageInput.value = "";
-
-          // Crea un contenedor para la respuesta del bot
+        function highlightAll() {
+          // Selecciona todos los bloques de código y los resalta
+          document.querySelectorAll("pre code").forEach(block => {
+            hljs.highlightBlock(block);
+          });
+        }
+    
+        // Obtención de elementos del DOM
+        const chatBox = document.querySelector(".chat-box");
+        const messageInput = document.querySelector("#message-input");
+        const sendBtn = document.querySelector("#send-btn");
+    
+        // Función para agregar un mensaje al chat
+        function addMessage(message, isUserMessage) {
           const messageDiv = document.createElement("div");
           messageDiv.classList.add("mt-3", "p-3", "rounded");
-          messageDiv.classList.add("bot-message");
-
-          // Extrae el contenido de la respuesta
-          const content = data.content;
-
-          // Verifica si la respuesta contiene un bloque de código
-          const hasCodeBlock = content.includes("```");
-          if (hasCodeBlock) {
-            // Si hay un bloque de código, reemplaza y formatea
-            const codeContent = content.replace(/```([\s\S]+?)```/g, '</p><pre><code>$1</code></pre><p>');
-            messageDiv.innerHTML = `<p>${codeContent}</p>`;
+    
+          // Determina si el mensaje es del usuario o del bot
+          if (isUserMessage) {
+            messageDiv.classList.add("user-message");
           } else {
-            // Si no hay bloque de código, agrega el contenido normal
-            messageDiv.innerHTML = `<p>${content}</p>`;
+            messageDiv.classList.add("bot-message");
           }
-
-          // Agrega el contenedor al chat y realiza un scroll hacia abajo
+    
+          // Añade el contenido del mensaje al contenedor
+          messageDiv.innerHTML = `<p>${message}</p>`;
+    
+          // Agrega el contenedor al chat 
           chatBox.appendChild(messageDiv);
           chatBox.scrollTop = chatBox.scrollHeight;
-
-        })
-        .catch(error => console.error(error));
-    }
-  }
-
-  // EventListener para el botón de enviar
-  sendBtn.addEventListener("click", sendMessage);
-
-  // EventListener para enviar mensajes al presionar Enter
-  messageInput.addEventListener("keydown", event => {
-    if (event.keyCode === 13 && !event.shiftKey) {
-      event.preventDefault();
-      sendMessage();
-    }
-  });
-</script>
+        }
+    
+        // Función para enviar mensajes al servidor y recibir respuestas del bot
+        function sendMessage() {
+          const message = messageInput.value.trim();
+    
+          // Verifica si el mensaje no está vacío
+          if (message !== "") {
+            // Agrega el mensaje del usuario al chat
+            addMessage(message, true);
+    
+            // Realiza una solicitud al servidor con el mensaje del usuario
+            fetch("/api", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json"
+              },
+              body: JSON.stringify({ message })
+            })
+              .then(response => response.json())
+              .then(data => {
+                // Limpia el área de entrada de mensajes
+                messageInput.value = "";
+    
+                // Crea un contenedor para la respuesta del bot
+                const messageDiv = document.createElement("div");
+                messageDiv.classList.add("mt-3", "p-3", "rounded");
+                messageDiv.classList.add("bot-message");
+    
+                // Extrae el contenido de la respuesta
+                const content = data.content;
+    
+                // Verifica si la respuesta contiene un bloque de código
+                const hasCodeBlock = content.includes("```");
+                if (hasCodeBlock) {
+                  // Si hay un bloque de código, reemplaza y formatea
+                  const codeContent = content.replace(/```([\s\S]+?)```/g, '</p><pre><code>$1</code></pre><p>');
+                  messageDiv.innerHTML = `<p>${codeContent}</p>`;
+                } else {
+                  // Si no hay bloque de código, agrega el contenido normal
+                  messageDiv.innerHTML = `<p>${content}</p>`;
+                }
+    
+                // Agrega el contenedor al chat y realiza un scroll hacia abajo
+                chatBox.appendChild(messageDiv);
+                chatBox.scrollTop = chatBox.scrollHeight;
+    
+              })
+              .catch(error => console.error(error));
+          }
+        }
+    
+        // EventListener para el botón de enviar
+        sendBtn.addEventListener("click", sendMessage);
+    
+        // EventListener para enviar mensajes al presionar Enter
+        messageInput.addEventListener("keydown", event => {
+          if (event.keyCode === 13 && !event.shiftKey) {
+            event.preventDefault();
+            sendMessage();
+          }
+        });
+      </script>
+      <script>
+        document.querySelector('.float-btn').addEventListener('click', function() {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        });
+      </script>
+    </body>
 </html>

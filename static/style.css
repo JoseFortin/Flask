@@ -19,10 +19,11 @@
   border-radius: 0.5rem;
   margin-bottom: 0.5rem;
   padding: 0.5rem;
+  text-align: left;
 }
 
 .bot-message {
-  background-color: #78BE20;
+  background-color: #88d4fa;
 }
 
 body {
@@ -52,7 +53,7 @@ body {
 }
 
 .container-section h2 {
-  color: #289ca7;
+  color: #73ced6;
 }
 
 .container-section ul {
@@ -158,4 +159,31 @@ textarea {
   border-radius: 5px;
   padding: 10px 20px;
   cursor: pointer;
+}
+
+.float-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #3A913F;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+.float-btn:hover {
+  background-color: #97D700;
+}
+
+.float-btn a {
+  color: #fff;
+  text-decoration: none;
+}
+.float-btn a:hover {
+  color: #cdf9a4;
+  text-decoration: none;
 }
