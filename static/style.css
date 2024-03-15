@@ -196,7 +196,7 @@ textarea {
   border: 2px solid #03738f;
   display: flex;
   margin-bottom: 20px;
-  background-image: linear-gradient(to bottom right, #fdfefe, #43cbf5,#3689fd,#003bd0);
+  background-image: linear-gradient(to bottom right, #fdfefe, #43cbf5,#67a5fc,#003bd0);
 }
 
 /* Estilo para el contenedor de texto */
@@ -208,7 +208,7 @@ textarea {
 /* Estilo para el encabezado */
 .text-container h3 {
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 30px;
+  font-size: 26px;
   text-align: center;
   color: #041f5d; 
   text-shadow: #43cbf5;
@@ -219,8 +219,9 @@ textarea {
 .text-container p {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 18px;
+
   color: #130f0f;
-  text-align: center;
+  text-align: justify;
   line-height: 1.5;
 }
 
@@ -231,11 +232,11 @@ textarea {
 
 /* Estilo para la imagen */
 .bobyb {
-  background-image: url('/static/img/Bbananas.png');
+  background-image: url('/static/img/penelopeybobbys.png');
   width: 250px;
-  height: 250px;
+  height: 275px;
   background-size: cover;
-  margin-top: 40px;
-  margin-right: 90px;
+  margin-top: 10px;
+  margin-right: 70px;
   border-radius: 10px;
 }
