@@ -4,6 +4,7 @@ import openai
 
 app = Flask(__name__)
 
+# ESTE ES EL ID DE LA API QUE SE ESTA UTILIZANDO , ES DECIR LA LLAVE QUE ABRE UNA PETICION A OPENAI.COM
 openai.api_key = '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'
 
 
