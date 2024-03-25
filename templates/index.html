@@ -105,21 +105,24 @@
             </li>
           </ul>
         </div>
+        <br><br><br>
       </nav>
         <main role="main" class="col-md-10 ml-sm-auto col-lg-10 px-md-9 d-flex flex-column align-items-center justify-content-center" style="max-width: 900px; margin: auto; border-radius: 25px;">
           <div class="bobby-container">
             <div class="text-container">
-                <h3>¡Hey, hey, hey! ¡Aquí están tus amigos Bobby Banana y Penelope Piña en acción!</h3>
-                <p>¿Listo para embarcarte en un viaje de descubrimiento y aprendizaje? 
+                <h3>¡Hey, hey, hey! ¡Aquí está tu amigo Bobby Banana en acción!</h3>
+                <span data-plugin="typed-js" data-plugin-string='["Apply now", "Find your dream job", "Come to work with us", "Be part of the Dole Family"]'></span>
+                <br>
+                <p class="contenedorazul">¿Listo para embarcarte en un viaje de descubrimiento y aprendizaje? 
                   ¡Porque nuestro increíble ChatBot de autoaprendizaje está aquí para hacer exactamente eso!
                    Desde curiosidades fascinantes hasta conocimientos profundos, estoy aquí para ayudarte a explorar el universo del saber.
                    ¡Así que adelante, hazme tus preguntas y juntos desentrañaremos los misterios del conocimiento!</p>
             </div>
-            <div class="image-container">
-                <div class="bobyb"></div>
+            <div class="image-container"id="chatbot">
+                <div class="bobyb" src="/static/img/Saltando-al-escenario-Desde-de-unscreen.gif"></div>
             </div>
         </div>
-          <div class="container mt-5 text-center"id="chatbot">
+          <div class="container mt-5 text-center">
             <h1 style="color: #3A913F;" >CHAT BOT </h1>
             <div class="chat-box mt-3"></div>
         
@@ -130,8 +133,8 @@
             <button type="button" class="btn btn-success btn-lg" id="send-btn">Enviar</button>
           </div>
           <br><br><br><br><br><br> <br><br><br><br><br><br>
-          <div class="float-btn">
-            <a class="btn-wsp" href="#">
+          <div class="float-btn" href="#">
+            <a class="btn-wsp"href="#chatbot">
               <i class="fas fa-comment"></i>
             </a>
           </div>
@@ -323,12 +326,7 @@
       </div>
       <script src="{{ url_for('static', filename='js/conversacion.js') }}"></script>
       <script>
-        document.querySelector('.float-btn').addEventListener('click', function() {
-          window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-          });
-        });
+  
       </script>
     </body>
 </html>

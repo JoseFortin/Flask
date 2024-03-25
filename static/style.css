@@ -32,9 +32,13 @@ body {
 
 .sidebar {
   background-color: #f8f9fa;
-  border-radius: 15px;
+  border-radius: 1rem; 
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 15px;
+  padding: 1.5rem; 
+  margin: 1rem; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
 }
 
 .main-content {
@@ -184,7 +188,7 @@ textarea {
   text-decoration: none;
 }
 .float-btn a:hover {
-  color: #06580e;
+  color: #07450d;
   text-decoration: none;
 }
 
@@ -196,7 +200,7 @@ textarea {
   border: 2px solid #03738f;
   display: flex;
   margin-bottom: 20px;
-  background-image: linear-gradient(to bottom right, #fdfefe, #43cbf5,#67a5fc,#003bd0);
+  background-image: linear-gradient(to bottom right, #fdfefe, #43cbf5,#67a5fc,#618af2);
 }
 
 /* Estilo para el contenedor de texto */
@@ -218,11 +222,14 @@ textarea {
 /* Estilo para el párrafo */
 .text-container p {
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 18px;
+  font-size: 30px;
 
   color: #130f0f;
   text-align: justify;
   line-height: 1.5;
+}
+.contenedorazul{
+  font-size: 40px;
 }
 
 /* Estilo para el contenedor de la imagen */
@@ -232,11 +239,75 @@ textarea {
 
 /* Estilo para la imagen */
 .bobyb {
-  background-image: url('/static/img/penelopeybobbys.png');
-  width: 250px;
-  height: 275px;
-  background-size: cover;
-  margin-top: 10px;
-  margin-right: 70px;
-  border-radius: 10px;
+  background-image: url('/static/img/Presentando-unscreen.gif');
+  width: 220px;
+  height: 315px;
+  background-size:cover;
+  margin-top: 1px;
+  margin-bottom: 30px;
+  margin-right: 95px;
+  margin-left: 20px;
+  border-radius: 1px;
+}
+@media only screen and (max-width: 768px) {
+  .bobby-container {
+    flex-direction: column;
+
+  }
+
+  .text-container {
+    padding: 20px 10px;
+  }
+
+  .bobyb {
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+/* Hacer la barra de navegación más pequeña en pantallas pequeñas */
+.navbar {
+  min-height: 50px;
+}
+
+/* Alinear el contenido principal al centro en pantallas pequeñas */
+.main-content {
+  padding: 20px 10px; /* Reducir el padding en pantallas pequeñas */
+}
+
+/* Hacer que los contenedores de sección tengan un margen inferior uniforme */
+.container-section {
+  margin-bottom: 2rem;
+}
+
+/* Ajustar el tamaño de fuente para encabezados en pantallas pequeñas */
+h1, h2, h4 {
+  font-size: 24px;
+}
+
+/* Reducir el tamaño de fuente de los párrafos en pantallas pequeñas */
+.container-section p, .text-container p {
+  font-size: 16px;
+}
+
+/* Ajustar el tamaño de fuente de los enlaces de la barra de navegación en pantallas pequeñas */
+.navbar-nav .nav-link {
+  font-size: 14px;
+}
+
+/* Ajustar el tamaño de fuente del logotipo de la barra de navegación en pantallas pequeñas */
+.navbar-brand {
+  font-size: 20px;
+}
+
+/* Reducir el tamaño de fuente de los elementos dentro de la barra lateral en pantallas pequeñas */
+.sidebar-sticky a {
+  font-size: 15px;
+}
+@media screen and (max-width: 768px) {
+  .sidebar {
+    text-align: center; /* Centra el texto cuando el ancho de la pantalla sea igual o menor a 768px */
+  }
 }
