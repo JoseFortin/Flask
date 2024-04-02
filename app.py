@@ -23,7 +23,8 @@ def main_js():
 @app.route("/api", methods=["POST"])
 def api():
     message = request.json.get("message")
-    
+    #Esta es la forma en que se hace una peticion a la IA DE OPENAI a traves de una aplicacion , 
+    #llamandno el message como el contenido que se le esta pasando
     completion = openai.ChatCompletion.create(
     model="gpt-3.5-turbo",
     messages=[
@@ -36,7 +37,7 @@ def api():
     else :
         return 'Fallo al Responder!'
     
-
+#AUI SE LLAMA LA PARTE PRINCIPAL DE LA APLICACION 
 if __name__=='__main__':
     app.run()
 
