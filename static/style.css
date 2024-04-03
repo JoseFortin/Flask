@@ -200,7 +200,7 @@ textarea {
   border: 2px solid #03738f;
   display: flex;
   margin-bottom: 20px;
-  background-image: linear-gradient(to bottom right, #fdfefe, #43cbf5,#67a5fc,#618af2);
+  background-image: linear-gradient(to bottom right, #fdfefe, #43cbf5,#67a5fc,#1949c1);
 }
 
 /* Estilo para el contenedor de texto */
