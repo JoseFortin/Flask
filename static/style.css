@@ -315,7 +315,9 @@ h1, h2, h4 {
 span{
   color: white;
 }
-
+.b-r-15{
+  border-radius: 15px;
+}
 
 
 
@@ -328,7 +330,7 @@ span{
     text-align: center;
   }
 }
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
+@media only screen and (min-width: 769px) and (max-width: 1023px) {
   .sidebar {
     text-align: center; /* Centra el texto cuando el ancho de la pantalla sea igual o menor a 768px */
   }
