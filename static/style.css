@@ -201,7 +201,7 @@ textarea {
   display: flex;
   margin-bottom: 20px;
   box-shadow: rgba(92, 217, 245, 0.3) 0px 19px 38px, rgba(3, 234, 255, 0.22) 0px 14px 10px;
-  background-image: linear-gradient(to bottom left, #7fdff7, #dbe7f2, #dbe7f2, #dbe7f2, #9dd7ff);
+  background-image: linear-gradient(to bottom left, #b6e7f4, #dbe7f2, #dbe7f2, #dbe7f2, #9bd7ff);
 }
 
 /* Estilo para el contenedor de texto */
@@ -267,25 +267,6 @@ textarea {
     margin-bottom: 20px;
   }
 }
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
-  .bobby-container {
-    flex-direction: column;
-    margin-left: 5px;
-
-  }
-
-  .text-container {
-    padding: 20px 10px;
-  }
-
-  .bobyb {
-    width: 100%;
-
-    height: auto;
-    margin-right: 0;
-    margin-bottom: 20px;
-  }
-}
 
 /* Hacer la barra de navegación más pequeña en pantallas pequeñas */
 .navbar {
@@ -326,8 +307,23 @@ h1, h2, h4 {
 .sidebar-sticky a {
   font-size: 15px;
 }
+
+
+
+
+
+
 @media screen and (max-width: 768px) {
   .sidebar {
     text-align: center; /* Centra el texto cuando el ancho de la pantalla sea igual o menor a 768px */
   }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .sidebar {
+    text-align: center; /* Centra el texto cuando el ancho de la pantalla sea igual o menor a 768px */
+  }
+}
+
+@media screen and (min-width: 1024px) {
+
 }
