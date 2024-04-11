@@ -197,10 +197,11 @@ textarea {
 .bobby-container {
   background-color: #f9f9f9;
   border-radius: 10px;
-  border: 2px solid #03738f;
+  border: none;
   display: flex;
   margin-bottom: 20px;
-  background-image: linear-gradient(to bottom right, #fdfefe, #43cbf5,#67a5fc,#1949c1);
+  box-shadow: rgba(92, 217, 245, 0.3) 0px 19px 38px, rgba(3, 234, 255, 0.22) 0px 14px 10px;
+  background-image: linear-gradient(to bottom left, #7fdff7, #dbe7f2, #dbe7f2, #dbe7f2, #9dd7ff);
 }
 
 /* Estilo para el contenedor de texto */
@@ -261,6 +262,25 @@ textarea {
 
   .bobyb {
     width: 100%;
+    height: auto;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .bobby-container {
+    flex-direction: column;
+    margin-left: 5px;
+
+  }
+
+  .text-container {
+    padding: 20px 10px;
+  }
+
+  .bobyb {
+    width: 100%;
+
     height: auto;
     margin-right: 0;
     margin-bottom: 20px;
