@@ -327,3 +327,8 @@ h1, h2, h4 {
 @media screen and (min-width: 1024px) {
 
 }
+.bobbyback{
+  max-width: 900px !important; 
+  margin: auto  !important;
+   border-radius: 25px  !important;
+}
