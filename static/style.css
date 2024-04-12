@@ -277,37 +277,34 @@ textarea {
   min-height: 50px;
 }
 
-/* Alinear el contenido principal al centro en pantallas pequeñas */
+
 .main-content {
-  padding: 20px 10px; /* Reducir el padding en pantallas pequeñas */
+  padding: 20px 10px; 
 }
 
-/* Hacer que los contenedores de sección tengan un margen inferior uniforme */
 .container-section {
   margin-bottom: 2rem;
 }
 
-/* Ajustar el tamaño de fuente para encabezados en pantallas pequeñas */
 h1, h2, h4 {
   font-size: 24px;
 }
 
-/* Reducir el tamaño de fuente de los párrafos en pantallas pequeñas */
+
 .container-section p, .text-container p {
   font-size: 16px;
 }
 
-/* Ajustar el tamaño de fuente de los enlaces de la barra de navegación en pantallas pequeñas */
 .navbar-nav .nav-link {
   font-size: 14px;
 }
 
-/* Ajustar el tamaño de fuente del logotipo de la barra de navegación en pantallas pequeñas */
+
 .navbar-brand {
   font-size: 20px;
 }
 
-/* Reducir el tamaño de fuente de los elementos dentro de la barra lateral en pantallas pequeñas */
+
 .sidebar-sticky a {
   font-size: 15px;
 }
