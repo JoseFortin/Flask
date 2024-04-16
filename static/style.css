@@ -342,9 +342,9 @@ span{
    border-radius: 25px  !important;
 }
 .informacion{
- background-color: #f8f9fa;
+  background-color: #f8f9fa;
   border-radius: 15px; 
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 10px 35px 35px rgba(1, 129, 131, 0.1);
 }
 .text-white{
   color: white !important;
