@@ -30,7 +30,7 @@ def api():
     messages=[
         {"role": "user",
          "content": 
-             "Mira despues de terminar esta oracion pondre un punto el cual indicara que la verdadera peticion comenzo pero si pide informacion sobre gatos pon como respuesta Lo siento eso no esta dentro de los parametros."+ message}
+             ""+ message}
     ]
     )
     if completion.choices[0].message!=None:

@@ -36,13 +36,10 @@
   // Funcion para enviar mensajes al servidor y recibir respuestas del bot
   function sendMessage() {
     const message = messageInput.value.trim();
-
-    // Verifica si el mensaje no est vacio
+  
     if (message !== "") {
-      // Agrega el mensaje del usuario al chat
       addMessage(message, true);
-
-      // Realiza una solicitud al servidor con el mensaje del usuario
+  
       fetch("/api", {
         method: "POST",
         headers: {
@@ -52,36 +49,31 @@
       })
         .then(response => response.json())
         .then(data => {
-          // Limpia el area de entrada de mensajes
           messageInput.value = "";
-
-          // Crea un contenedor para la respuesta del bot
+  
           const messageDiv = document.createElement("div");
           messageDiv.classList.add("mt-3", "p-3", "rounded");
           messageDiv.classList.add("bot-message");
-
-          // Extrae el contenido de la respuesta
-          const content = data.content;
-
-          // Verifica si la respuesta contiene un bloque de código
-          const hasCodeBlock = content.includes("```");
-          if (hasCodeBlock) {
-            // Si hay un bloque de código, reemplaza y formatea
-            const codeContent = content.replace(/```([\s\S]+?)```/g, '</p><pre><code>$1</code></pre><p>');
-            messageDiv.innerHTML = `<p>${codeContent}</p>`;
-          } else {
-            // Si no hay bloque de código, agrega el contenido normal
-            messageDiv.innerHTML = `<p>${content}</p>`;
-          }
-
-          // Agrega el contenedor al chat y realiza un scroll hacia abajo
+  
+          let content = data.content;
+  
+          // Dividir el contenido en líneas individuales
+          const lines = content.split("\n");
+  
+          // Crear un párrafo para cada línea
+          lines.forEach(line => {
+            const paragraph = document.createElement("p");
+            paragraph.textContent = line.trim();
+            messageDiv.appendChild(paragraph);
+          });
+  
           chatBox.appendChild(messageDiv);
           chatBox.scrollTop = chatBox.scrollHeight;
-
         })
         .catch(error => console.error(error));
     }
   }
+  
 
   // EventListener para el botón de enviar
   sendBtn.addEventListener("click", sendMessage);
@@ -93,3 +85,4 @@
       sendMessage();
     }
   });
+  

@@ -4,6 +4,7 @@
   font-family: 'Josefin Sans', sans-serif;
 }
 
+
 .chat-box {
   border: 1px solid #e1efcb;
   padding: 1rem;
@@ -28,6 +29,7 @@
 
 body {
   padding-top: 56px; 
+
 }
 
 .sidebar {
@@ -109,7 +111,7 @@ body {
 }
 
 body {
-  background-color: #f8f9fa;
+  background-color: #0f6ece;
 }
 
 .navbar {
@@ -349,3 +351,6 @@ span{
 .text-white{
   color: white !important;
 }
+
+/* VIDEOO  */
+
