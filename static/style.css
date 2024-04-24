@@ -273,6 +273,23 @@ textarea {
     margin-bottom: 20px;
   }
 }
+@media only screen and (max-width: 1024px) {
+  .bobby-container {
+    flex-direction: row;
+
+  }
+
+  .text-container {
+    padding: 20px 10px;
+  }
+
+  .bobyb {
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
 
 /* Hacer la barra de navegación más pequeña en pantallas pequeñas */
 .navbar {
@@ -329,15 +346,13 @@ span{
     text-align: center;
   }
 }
-@media only screen and (min-width: 769px) and (max-width: 1023px) {
+@media only screen and (min-width: 769px) and (max-width: 1020px) {
   .sidebar {
     text-align: center; /* Centra el texto cuando el ancho de la pantalla sea igual o menor a 768px */
   }
 }
 
-@media screen and (min-width: 1024px) {
 
-}
 .bobbyback{
   max-width: 900px !important; 
   margin: auto  !important;
