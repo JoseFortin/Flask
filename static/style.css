@@ -1,3 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	font-family: 'Open Sans';
+}
+
+
+/* Header styles */
+header {
+	background-color: #f2f2f2;
+	text-align: center;
+	padding: 25px;
+}
+
+/* Navigation styles */
+nav a {
+	display: inline-block;
+	text-decoration: none;
+	color: #696969;
+	margin: 0 15px; /* Decreased margin for smaller screens */
+	padding: 5px 10px; /* Decreased padding for smaller screens */
+	border-radius: 10px;
+}
+
+nav a:hover {
+	background-color: #157e00;
+	color: #fff;
+}
+
+.txt-white {
+	color: white;
+	font-weight: bold; /* Corrected typo: 'text-decoration' to 'font-weight' */
+}
+
+/* Header with background image styles */
+.encabezado-img {
+	background-image: url(/static/img/planta3.png); /* Image for main background */
+	background-size: cover;
+	height: 440px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+}
+.txt-blue {
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-style: bold;
+  /* Aquí puedes agregar más estilos según tus necesidades */
+}
+
+.encabezado-img p {
+	font-size: 18px;
+}
+
+.encabezado-img h1 {
+	font-size: 50px;
+	padding: 15px 0;
+}
+
+/* Media query for responsiveness */
+@media only screen and (max-width: 768px) {
+	/* Adjustments for smaller screens */
+	nav a {
+		margin: 0 10px; /* Further decreased margin */
+		padding: 5px 8px; /* Further decreased padding */
+	}
+
+	.encabezado-img h1 {
+		font-size: 40px; /* Decreased font size for smaller screens */
+	}
+}
+
+
+
+
+
+
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
 
 * {
@@ -27,10 +113,6 @@
   background-color: #88d4fa;
 }
 
-body {
-  padding-top: 56px; 
-
-}
 
 .sidebar {
   background-color: #f8f9fa;
@@ -80,9 +162,13 @@ body {
 }
 
 .navbar-brand {
-  color: white;
+  color: black;
   font-weight: bold;
 }
+.navbar-brand:hover {
+color: #e326c6;
+}
+
 
 .navbar-nav .nav-link {
   color: #B7DD79;
@@ -115,8 +201,8 @@ body {
 }
 
 .navbar {
-  background-color: #3A913F;
-  color: white;
+  background-color: transparent;
+  color: rgb(0, 0, 0);
 }
 
 .sidebar {
@@ -350,6 +436,12 @@ span{
   .sidebar {
     text-align: center; /* Centra el texto cuando el ancho de la pantalla sea igual o menor a 768px */
   }
+  .encabezado-img{
+ text-align: center;
+  }
+  header{
+    text-align: center;
+  }
 }
 
 
@@ -365,6 +457,7 @@ span{
 }
 .text-white{
   color: white !important;
+  font-size: 21px;
 }
 
 /* VIDEOO  */
@@ -377,4 +470,15 @@ span{
 .sidebar li {
   width: 100%; /* Ocupa todo el ancho del contenedor */
   margin-bottom: 0.5rem; /* Espacio entre elementos */
+}
+
+/*-----------------------------*/
+
+#fondo {
+  background-image: url('/static/img/hn11.JPG');
+  background-size: cover; /* Para que la imagen cubra todo el div */
+  background-position: center; /* La posición del centro */
+  border-radius: 0% 0% 15% 0%;
+  /* Asegúrate de que el div tenga una altura para que la imagen sea visible */
+  height: 300px; /* Puedes ajustar la altura según tus necesidades */
 }

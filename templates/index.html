@@ -1,7 +1,7 @@
 <html>
 
 <head>
-  <title>CHAT APP DE COMUITY TRAINING</title>
+  <title>CHAT APP DE COMUNITY TRAINING</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/static/style.css">
@@ -10,12 +10,18 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-md fixed-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">CHAT BOT</a>
-    </div>
-  </nav>
-  </div>
+	<header>
+		<nav>
+			<a href="#">Inicio</a>
+			<a href="#competenciasO">Competencias</a>
+      <a href="#chatbots">Chat Bot</a>
+		</nav>
+	</header>
+
+	<div class="encabezado-img">
+		<h1 class="txt-white txt-blue">Espacio de Autoaprendizaje</h1>
+    <p class="txt-blue text-center">Bienvenido a CHATBOT<br> Decubre como mejorar tus competencias</p>
+	</div>
   <br><br>
   <div class="container-fluid sticky-top">
     <div class="row">
@@ -24,7 +30,7 @@
                 <ul class="nav flex-column text-white,nav-item">
                     <li>
                         <a class="nav-link" href="#competenciasO">
-                            <h4 class="text-white">Competencias Organizacionales</h4>
+                            <span class="text-white">Competencias Organizacionales</span>
                         </a>
                     </li>
                     <li>
@@ -123,7 +129,7 @@
 
 
         
-          <div class="container mt-5 text-center">
+          <div class="container mt-5 text-center" id="chatbots">
             <h1 class="color1">CHAT BOT </h1>
             <div class="chat-box mt-3"></div>
         
@@ -327,6 +333,8 @@
           </div>
         </div>
       </div>
+      <footer>
+      </footer>
       <script src="{{ url_for('static', filename='js/conversacion.js') }}"></script>
       <script>
   
