@@ -39,14 +39,22 @@ nav a:hover {
 
 /* Header with background image styles */
 .encabezado-img {
-	background-image: url(/static/img/nose2.png); /* Image for main background */
+	background-image: url(/static/img/planta3.png); /* Image for main background */
 	background-size: cover;
-	height: 400px;
+	height: 440px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	color: #fff;
+}
+.txt-blue {
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-style: bold;
+  /* Aquí puedes agregar más estilos según tus necesidades */
 }
 
 .encabezado-img p {
