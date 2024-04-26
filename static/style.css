@@ -9,29 +9,37 @@ body{
 	font-family: 'Open Sans';
 }
 
-header{
+
+/* Header styles */
+header {
 	background-color: #f2f2f2;
 	text-align: center;
 	padding: 25px;
 }
-nav a{
+
+/* Navigation styles */
+nav a {
 	display: inline-block;
 	text-decoration: none;
 	color: #696969;
-	margin: 0 30px;
-	padding: 5px 15px;
+	margin: 0 15px; /* Decreased margin for smaller screens */
+	padding: 5px 10px; /* Decreased padding for smaller screens */
 	border-radius: 10px;
 }
+
 nav a:hover {
 	background-color: #157e00;
 	color: #fff;
 }
+
 .txt-white {
-  color: white;
-  text-decoration: bold;
+	color: white;
+	font-weight: bold; /* Corrected typo: 'text-decoration' to 'font-weight' */
 }
-.encabezado-img{
-	background-image: url(/static/img/nose2.png); /* imagen fondo principal*/
+
+/* Header with background image styles */
+.encabezado-img {
+	background-image: url(/static/img/nose2.png); /* Image for main background */
 	background-size: cover;
 	height: 400px;
 	display: flex;
@@ -40,15 +48,28 @@ nav a:hover {
 	justify-content: center;
 	color: #fff;
 }
-.encabezado-img p{
+
+.encabezado-img p {
 	font-size: 18px;
 }
-.encabezado-img h1{
+
+.encabezado-img h1 {
 	font-size: 50px;
 	padding: 15px 0;
-
 }
 
+/* Media query for responsiveness */
+@media only screen and (max-width: 768px) {
+	/* Adjustments for smaller screens */
+	nav a {
+		margin: 0 10px; /* Further decreased margin */
+		padding: 5px 8px; /* Further decreased padding */
+	}
+
+	.encabezado-img h1 {
+		font-size: 40px; /* Decreased font size for smaller screens */
+	}
+}
 
 
 
@@ -428,6 +449,7 @@ span{
 }
 .text-white{
   color: white !important;
+  font-size: 21px;
 }
 
 /* VIDEOO  */
