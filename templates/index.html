@@ -10,12 +10,19 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-md fixed-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">CHAT BOT</a>
-    </div>
-  </nav>
-  </div>
+	<header>
+		<nav>
+			<a href="#">Inicio</a>
+			<a href="#competenciasO">Competencias</a>
+      <a href="#chatbots">Chat Bot</a>
+		</nav>
+	</header>
+
+	<div class="encabezado-img">
+		<p>Bienvenido a CHATBOT</p>
+		<h1 class="txt-white">Espacio de Autoaprendizaje</h1>
+		<p>Decubre como mejorar tus competencias</p>
+	</div>
   <br><br>
   <div class="container-fluid sticky-top">
     <div class="row">
@@ -123,7 +130,7 @@
 
 
         
-          <div class="container mt-5 text-center">
+          <div class="container mt-5 text-center" id="chatbots">
             <h1 class="color1">CHAT BOT </h1>
             <div class="chat-box mt-3"></div>
         
@@ -327,6 +334,8 @@
           </div>
         </div>
       </div>
+      <footer>
+      </footer>
       <script src="{{ url_for('static', filename='js/conversacion.js') }}"></script>
       <script>
   

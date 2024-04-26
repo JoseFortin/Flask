@@ -1,3 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	font-family: 'Open Sans';
+}
+
+header{
+	background-color: #f2f2f2;
+	text-align: center;
+	padding: 25px;
+}
+nav a{
+	display: inline-block;
+	text-decoration: none;
+	color: #696969;
+	margin: 0 30px;
+	padding: 5px 15px;
+	border-radius: 10px;
+}
+nav a:hover {
+	background-color: #157e00;
+	color: #fff;
+}
+.txt-white {
+  color: white;
+  text-decoration: bold;
+}
+.encabezado-img{
+	background-image: url(/static/img/nose2.png); /* imagen fondo principal*/
+	background-size: cover;
+	height: 400px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+}
+.encabezado-img p{
+	font-size: 18px;
+}
+.encabezado-img h1{
+	font-size: 50px;
+	padding: 15px 0;
+
+}
+
+
+
+
+
+
+
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
 
 * {
@@ -27,10 +84,6 @@
   background-color: #88d4fa;
 }
 
-body {
-  padding-top: 56px; 
-
-}
 
 .sidebar {
   background-color: #f8f9fa;
@@ -80,9 +133,13 @@ body {
 }
 
 .navbar-brand {
-  color: white;
+  color: black;
   font-weight: bold;
 }
+.navbar-brand:hover {
+color: #e326c6;
+}
+
 
 .navbar-nav .nav-link {
   color: #B7DD79;
@@ -115,8 +172,8 @@ body {
 }
 
 .navbar {
-  background-color: #3A913F;
-  color: white;
+  background-color: transparent;
+  color: rgb(0, 0, 0);
 }
 
 .sidebar {
@@ -350,6 +407,12 @@ span{
   .sidebar {
     text-align: center; /* Centra el texto cuando el ancho de la pantalla sea igual o menor a 768px */
   }
+  .encabezado-img{
+ text-align: center;
+  }
+  header{
+    text-align: center;
+  }
 }
 
 
@@ -377,4 +440,15 @@ span{
 .sidebar li {
   width: 100%; /* Ocupa todo el ancho del contenedor */
   margin-bottom: 0.5rem; /* Espacio entre elementos */
+}
+
+/*-----------------------------*/
+
+#fondo {
+  background-image: url('/static/img/hn11.JPG');
+  background-size: cover; /* Para que la imagen cubra todo el div */
+  background-position: center; /* La posición del centro */
+  border-radius: 0% 0% 15% 0%;
+  /* Asegúrate de que el div tenga una altura para que la imagen sea visible */
+  height: 300px; /* Puedes ajustar la altura según tus necesidades */
 }
