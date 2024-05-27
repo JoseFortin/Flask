@@ -85,4 +85,27 @@
       sendMessage();
     }
   });
+  // JavaScript para reiniciar la animación al llegar al final
+document.addEventListener("DOMContentLoaded", function() {
+  var slider = document.querySelector(".slider");
+  var slideTrack = slider.querySelector(".slide-track");
   
+  // Clonar los primeros slides para que se muestren después de que se hayan mostrado todos
+  var slides = slideTrack.querySelectorAll(".slide");
+  var cloneSlides = [];
+  slides.forEach(function(slide) {
+    var clone = slide.cloneNode(true);
+    cloneSlides.push(clone);
+  });
+  cloneSlides.forEach(function(clone) {
+    slideTrack.appendChild(clone);
+  });
+  
+  // Reiniciar la animación al llegar al final
+  slideTrack.addEventListener("animationiteration", function() {
+    slideTrack.style.animationPlayState = "paused";
+    setTimeout(function() {
+      slideTrack.style.animationPlayState = "running";
+    }, 100);
+  });
+});

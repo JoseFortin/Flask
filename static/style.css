@@ -460,25 +460,104 @@ span{
   font-size: 21px;
 }
 
-/* VIDEOO  */
 
 
-.sidebar ul {
-  padding: 0; /* Elimina el padding predeterminado de la lista */
+
+
+/**SLIDER****/
+.slider {
+  width: 100%;
+  overflow: hidden;
+  padding: 10px; /* Añadido para hacer la barra un poco más grande */
 }
 
-.sidebar li {
-  width: 100%; /* Ocupa todo el ancho del contenedor */
-  margin-bottom: 0.5rem; /* Espacio entre elementos */
+.slider .slide-track {
+  display: flex;
+  width: auto; /* Ajustado para adaptarse al contenido */
+  animation: scroll 70s linear infinite; /* Tiempo de animación */
 }
 
-/*-----------------------------*/
-
-#fondo {
-  background-image: url('/static/img/hn11.JPG');
-  background-size: cover; /* Para que la imagen cubra todo el div */
-  background-position: center; /* La posición del centro */
-  border-radius: 0% 0% 15% 0%;
-  /* Asegúrate de que el div tenga una altura para que la imagen sea visible */
-  height: 300px; /* Puedes ajustar la altura según tus necesidades */
+.slider .slide {
+  flex: 0 0 auto; /* Ajustado para que los slides no se estiren */
+  margin: 0 15px; /* Añadido para espaciar los slides */
 }
+
+.slider .slide p {
+  margin: 0;
+  font-size: 18px; /* Tamaño del texto aumentado */
+  font-family: Arial, sans-serif; /* Estilo de fuente cambiado */
+}
+
+.slider .slide img {
+  width: 42px; /* Tamaño de imagen aumentado */
+  height: auto;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% * 7)); /* Ajustado para adaptarse al número de slides */
+  }
+}
+
+.bg-r {
+  background-color: red;
+  color: white;
+  padding: 10px; /* Añadido para hacer que el texto se vea mejor */
+  border-radius: 5px; /* Bordes redondeados */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* Sombra para un efecto de elevación */
+}
+
+.bg-v {
+  background-color: rgb(24, 113, 6);
+  color: white;
+  text-align: center; /* Centrado de texto */
+  padding: 10px; /* Añadido para mejorar el aspecto del texto */
+  border-radius: 5px; /* Bordes redondeados */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* Sombra */
+}
+
+.bg-n {
+  background-color: rgb(252, 95, 5);
+  color: white;
+  font-style: oblique;
+  padding: 10px; /* Añadido para mejorar el aspecto del texto */
+  border-radius: 5px; /* Bordes redondeados */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* Sombra */
+}
+.bg-az {
+  background-color: rgb(22, 35, 103);
+  color: white;
+  font-style: oblique;
+  padding: 10px; /* Añadido para mejorar el aspecto del texto */
+  border-radius: 5px; /* Bordes redondeados */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* Sombra */
+}
+.bg-grn {
+  background-color: rgb(7, 104, 2);
+  color: white;
+  font-style: oblique;
+  padding: 10px; /* Añadido para mejorar el aspecto del texto */
+  border-radius: 5px; /* Bordes redondeados */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* Sombra */
+}
+.bg-aqua {
+  background-color: rgb(12, 138, 102);
+  color: white;
+  font-style: oblique;
+  padding: 10px; /* Añadido para mejorar el aspecto del texto */
+  border-radius: 5px; /* Bordes redondeados */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* Sombra */
+}
+
+.bg-mor {
+  background-color: rgb(101, 0, 64);
+  color: white;
+  font-style: oblique;
+  padding: 10px; /* Añadido para mejorar el aspecto del texto */
+  border-radius: 5px; /* Bordes redondeados */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* Sombra */
+}
+
